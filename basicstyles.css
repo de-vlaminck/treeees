@@ -1,0 +1,232 @@
+header, nav, aside { 
+	display: block;
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background-color: #1b261c;
+	justify-content: center;
+	align-items: center;
+	font-family: Roboto;
+	
+	/* NOTE:  This isn't going to look great because it doesn't
+	 *        deal with resizing windows well.  However, it's here for
+	 *        demo purposes.
+	 */
+	background-image: url("canopy.jpg");
+	background-attachment: fixed;
+	background-repeat:repeat;
+}
+
+.content {
+    background: rgba(255, 255, 255, 0.92); 
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    color: #2c3e50;
+	overflow: hidden;
+}
+
+#container p:last-of-type{
+	color: black;
+}
+
+p:first-of-type{
+	color:black;
+}
+/* Define a clear, fixed height for the entire navigation bar */
+nav {
+    background-color: #333333;
+    height: 70px; /* Sets a solid bar height */
+    margin-top: 0px;
+    margin-bottom: 30px;
+    padding: 0;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Remove default list styling and align items inline */
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+nav li { 
+    display: inline-block; 
+    width: 150px;
+    height: 100%; /* Forces list items to match navbar height */
+    background-color: #333333;
+    text-align: center;
+    margin: 0;
+    vertical-align: top;
+}
+
+nav li:hover {
+    background-color: #555555;
+}
+
+nav li:hover a {
+    color: white;
+    text-shadow: 0.5px 0.5px 4px #333333;
+}
+
+nav li a { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Fills the height of the li */
+    text-decoration: none;
+    color: #ffffff;
+	font-weight: bold;
+    font-size: 15pt;
+    box-sizing: border-box;
+}
+
+/* Logo specific wrapper */
+nav li:first-child {
+		width: 70px;
+}
+.logo-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+/* Forces the logo image to scale cleanly to the nav height */
+.logo-link img {
+    height: 60%; /* Adjust this percentage to make the logo look bigger or smaller inside the bar */
+    display: block;
+}
+
+.pad{
+	height: 50px;
+	width: ;
+	background-color: rgb(205, 135, 61);
+	color: black;
+	font-size: 14px;
+	font-family: Roboto;
+	font-weight: bold;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+}
+.pad:hover{
+	background-color: darkkhaki;
+	transform: translateY(-2px);
+}
+
+.pad:active{
+	transform: scale(.95);
+	background-color: darkorange
+}
+#container { 
+	width: 70%;
+	padding: 10px;
+	margin: auto;
+	overflow: auto;
+}
+
+.image-container {
+	display: block;
+	width: 300px;
+	height: 300px;
+	margin: auto;
+}
+
+.image-container img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}/* Basic HTML5 element settings for CSS JOSLENNE PENA */
+
+aside {
+	float: right;
+	width: 250px;
+	background-color: rgb(0, 179, 106);
+	border: thin solid black;
+	margin-left: 30px;
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: .75em;
+	font-style: italic;
+	font-size: 1.5em;
+	border-radius: 1em;
+}
+
+aside img {
+	display:block;
+	margin: 0 auto;
+	max-width: 100%;
+	height: auto;
+	border-radius: .5em;
+}
+details {
+	border: medium solid maroon;
+	padding: 1em;
+	/*is this an accessibility roadblock */
+	user-select: none;
+}
+
+details summary {
+		font-weight: bolder
+}
+
+table {
+    width: 90%; /* Adjust as needed, e.g., 80% or 100% */
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse; /* Optional: cleans up table borders */
+}
+
+table tbody td:nth-child(1) {
+    text-align: left;
+    vertical-align: top;
+}
+
+table tbody td:nth-child(2) {
+    text-align: right;
+    vertical-align: top;
+}
+
+table tbody tr th {
+    text-align: center;
+}
+
+.company-group {
+    margin-bottom: 25px;
+}
+
+/* Style the main company name */
+.company-group h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.job {
+    margin-bottom: 12px;
+    padding-left: 15px;
+    border-left: 2px solid #888;
+}
+
+.job p {
+    margin: 0;
+}
+
+.job p:first-child {
+    display: flex;
+    justify-content: space-between;
+}
+
+.job em {
+    font-style: italic;
+
+}
