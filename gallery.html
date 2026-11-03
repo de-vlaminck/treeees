@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Tree at Home!</title>
+        <link rel="stylesheet" href="basicstyles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <link rel="preload" as="image" href="canopy.jpg" fetchpriority="high">
+        <link rel="preload" as="image" href="logowhite.svg" fetchpriority="high">
+
+       <style>
+        body {
+            font-family: "Roboto", sans-serif;
+        }
+
+        .row {
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+        }
+
+        .column {
+            width: 100%;
+            aspect-ratio: 1 / 1; 
+            box-sizing: border-box;
+        }
+
+        .column img {
+            opacity: 1;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover; /* Crops the photo to fill the square without stretching */
+            border: 1px solid transparent; /* Prevents layout jump on hover */
+        }
+
+        .column img:hover {
+            opacity: 0.8;
+            border: 1px solid black;
+        }
+
+        /* Clear floats after the columns */
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Fullscreen Overlay Lightbox */
+        .gallerycontainer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.9); /* Dark backdrop */
+            display: none; /* Hidden by default */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000; /* Sits on top of everything */
+        }
+
+        /* Expanded image sizing inside the full screen */
+        #expandedImg {
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain; /* Keeps full image visible without cropping */
+        }
+
+        /* Expanding image text */
+        #imgtext {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 16px;
+            border-radius: 4px;
+        }
+
+        /* Closable button inside the image */
+        .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 45px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .closebtn:hover {
+            color: #ccc;
+        }
+        </style>
+    </head>
+
+<body>
+    <header>
+    <nav>
+        <li><a href="index.html" class="logo-link"><img src="logowhite.svg" alt="Home Logo"></a></li>
+        <li><a href="projects.html">PROJECTS</a></li>
+        <li><a href="gallery.html">GALLERY</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+    </nav>
+    </header>
+<div id="container">
+    <div class="content">
+        <div class="row">
+            <div class="column">
+            <img src="tree.jpg" alt="Free tree in its new home!" onclick="myFunction(this);">
+            </div>
+
+            <div class="column">
+            <img src="noah2.jpg" alt="Trees for residents!" onclick="myFunction(this);">
+            </div>
+
+            <div class="column">
+            <img src="36 art.jpg" alt="Community tree planting!" onclick="myFunction(this);">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- The fullscreen expanding image container -->
+<div class="gallerycontainer">
+    <!-- Close the image -->
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+    <!-- Expanded image -->
+    <img id="expandedImg">
+
+    <!-- Image text -->
+    <div id="imgtext"></div>
+</div>
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  
+  /* Changed from block to flex to center the photo perfectly on screen */
+  expandImg.parentElement.style.display = "flex";
+}
+</script>
+                    <div class="image-container">
+                    <img src="greehill-tree-rotating.gif" width="400px">
+                    </div>
+</body>
+</html>
