@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tree at Home!</title>
+        <link rel="stylesheet" href="basicstyles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <link rel="preload" as="image" href="canopy.jpg" fetchpriority="high">
+        <link rel="preload" as="image" href="logowhite.svg" fetchpriority="high">
+
+        <style>
+        body {
+        font-family: "Roboto", sans-serif;
+        }
+
+        aside{
+            width: 10em;
+        }
+
+        #sidebuttons {
+            display: flex;
+            gap: 10px;
+            width: 100%;
+            margin-top: .75em;
+        }
+
+        #sidebuttons button{
+            flex: 1;
+        }
+        </style>
+    </head>
+    <!--everything in body will appear on the website-->
+    <body>
+        <header>
+        <nav>
+        <li><a href="index.html" class="logo-link"><img src="logowhite.svg" alt="Home Logo"></a></li>
+        <li><a href="about.html">PROJECTS</a></li>
+        <li><a href="gallery.html">GALLERY</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        </nav>
+        </header>
+        <div id="container">
+            <div class="content">
+                <aside>
+                    <img src="noah.jpg" alt="Noah">
+                    <div id="sidebuttons">
+                        <button class="pad" onclick= 'location.href="mailto:devla006@umn.edu"'>EMAIL</button>
+                        <button class="pad" onclick= 'window.open("https://www.linkedin.com/in/noah-de-vlaminck/", "_blank")'>LINKEDIN</button>
+                    </div>
+                </aside>
+                <h1>Contact!!</h1>
+                    <p>Noah De Vlaminck is a tree enthusiast and ISA Certified Arborist! Noah has a B.S. in Forest and Natural Resources Management from the University of Minnesota and is currently a M.S. student in the Natural Resources Science and Management program with a focus on urban forestry at the Univeristy of Minnesota.
+                    <br>
+                    <br>
+                    </p>
+            </div>
+        </div>
+            <div class="image-container">
+                <img src="greehill-tree-rotating.gif" width="400">
+            </div>
+        
+    </body>
+</html>
