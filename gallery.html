@@ -31,8 +31,8 @@
             width: 100%;
             height: 100%;
             display: block;
-            object-fit: cover; /* Crops the photo to fill the square without stretching */
-            border: 1px solid transparent; /* Prevents layout jump on hover */
+            object-fit: cover; 
+            border: 1px solid transparent; 
         }
 
         .column img:hover {
@@ -40,35 +40,31 @@
             border: 1px solid black;
         }
 
-        /* Clear floats after the columns */
         .row::after {
             content: "";
             display: table;
             clear: both;
         }
 
-        /* Fullscreen Overlay Lightbox */
         .gallerycontainer {
             position: fixed;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: rgba(0, 0, 0, 0.9); /* Dark backdrop */
-            display: none; /* Hidden by default */
+            background: rgba(0, 0, 0, 0.9); 
+            display: none;
             justify-content: center;
             align-items: center;
-            z-index: 1000; /* Sits on top of everything */
+            z-index: 1000; 
         }
 
-        /* Expanded image sizing inside the full screen */
         #expandedImg {
             max-width: 90vw;
             max-height: 90vh;
-            object-fit: contain; /* Keeps full image visible without cropping */
+            object-fit: contain; 
         }
 
-        /* Expanding image text */
         #imgtext {
             position: absolute;
             bottom: 30px;
@@ -81,7 +77,6 @@
             border-radius: 4px;
         }
 
-        /* Closable button inside the image */
         .closebtn {
             position: absolute;
             top: 20px;
@@ -127,15 +122,13 @@
 </div>
 
 
-<!-- The fullscreen expanding image container -->
+<!-- fullscreen expanding image  -->
 <div class="gallerycontainer">
     <!-- Close the image -->
     <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
 
-    <!-- Expanded image -->
     <img id="expandedImg">
 
-    <!-- Image text -->
     <div id="imgtext"></div>
 </div>
 <script>
@@ -145,7 +138,6 @@ function myFunction(imgs) {
   expandImg.src = imgs.src;
   imgText.innerHTML = imgs.alt;
   
-  /* Changed from block to flex to center the photo perfectly on screen */
   expandImg.parentElement.style.display = "flex";
 }
 </script>
