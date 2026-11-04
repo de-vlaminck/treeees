@@ -59,9 +59,13 @@ nav ul {
     margin: 0;
     padding: 0;
     height: 100%;
+	display: flex;
 }
 
 nav li { 
+	flex: 1;                   /* Automatically shrinks/grows to fill mobile screens */
+    min-width: 0;              /* Prevents flex items from clipping */
+    max-width: 150px;
     display: inline-block; 
     width: 150px;
     height: 100%; /* Forces list items to match navbar height */
