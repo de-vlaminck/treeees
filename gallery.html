@@ -49,7 +49,7 @@
 
         .column img:hover {
             opacity: 0.8;
-            border: 1px solid black;
+	        transform: scale(1.05);
         }
 
         .row::after {
@@ -111,23 +111,60 @@
     <nav>
         <li><a href="home.html" class="logo-link"><img src="logowhite.svg" alt="Home Logo"></a></li>
         <li><a href="projects.html">PROJECTS</a></li>
-        <li><a href="gallery.html">GALLERY</a></li>
+        <li class="active"><a href="gallery.html">GALLERY</a></li>
         <li><a href="contact.html">CONTACT</a></li>
     </nav>
     </header>
 <div id="container">
     <div class="content">
+        <h1>Gallery</h1>
         <div class="row">
+            <div class="column">
+            <img src="gravel.jpg" alt="Trees in our gravel bed" onclick="myFunction(this);">
+            </div>
+
+            <div class="column">
+            <img src="shoe.jpg" alt="The Shoe Tree!" onclick="myFunction(this);">
+            </div>          
+
             <div class="column">
             <img src="tree.jpg" alt="Free tree in its new home!" onclick="myFunction(this);">
             </div>
 
             <div class="column">
-            <img src="noah2.jpg" alt="Trees for residents!" onclick="myFunction(this);">
+            <img src="36 art.jpg" alt="Community tree planting!" onclick="myFunction(this);">
             </div>
 
             <div class="column">
-            <img src="36 art.jpg" alt="Community tree planting!" onclick="myFunction(this);">
+            <img src="stp.jpg" alt="Boulevard in St Paul" onclick="myFunction(this);">
+            </div>
+
+            <div class="column">
+            <img src="north.jpg" alt="Free trees at businesses in North Minneapolis" onclick="myFunction(this);">
+            </div>  
+
+            <div class="column">
+            <img src="blvd.jpg" alt="Boulevard in Minneapolis!" onclick="myFunction(this);">
+            </div>
+
+            <div class="column">
+            <img src="river.jpg" alt="Minnesota River" onclick="myFunction(this);">
+            </div>
+
+            <div class="column">
+            <img src="walker.jpg" alt="The Walker Sculpture Garden" onclick="myFunction(this);">
+            </div>
+
+            <div class="column">
+            <img src="fountain.jpg" alt="Irvine Park in St Paul" onclick="myFunction(this);">
+            </div>
+
+            <div class="column">
+            <img src="miss.jpg" alt="Missouri River" onclick="myFunction(this);">
+            </div>
+
+            <div class="column">
+            <img src="noah2.jpg" alt="Trees for residents!" onclick="myFunction(this);">
             </div>
         </div>
     </div>
@@ -153,8 +190,24 @@ function myFunction(imgs) {
   expandImg.parentElement.style.display = "flex";
 }
 </script>
-                    <div class="image-container">
-                    <img src="greehill-tree-rotating.gif" width="400px">
-                    </div>
+
 </body>
+<footer>
+    <div class="footer-content">
+        <p>Created by Noah De Vlaminck<br>for Code for Us 2026!</p>
+    </div>
+
+    <div class="ouro">
+        <img src="ouro.gif" style="width: 100%; height: auto; display: block;">
+    </div>
+
+    <div class="footer-content right-side">
+        <div id="buttonholder">
+        <div id="footer-buttons">
+            <button class="pad" onclick= 'location.href="mailto:devla006@umn.edu"'><img src="mail.svg"></button>
+            <button class="pad" onclick= 'window.open("https://www.linkedin.com/in/noah-de-vlaminck/", "_blank")'><img src="linkedin.svg"></button>
+        </div>
+        </div>
+    </div>
+</footer>
 </html>
