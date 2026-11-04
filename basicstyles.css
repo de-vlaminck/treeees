@@ -1,9 +1,3 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
 header, nav, aside { 
 	display: block;
 	margin: 0px;
@@ -16,9 +10,6 @@ body {
 	align-items: center;
 	font-family: Roboto;
 	margin: 0px;
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
 	/* NOTE:  This isn't going to look great because it doesn't
 	 *        deal with resizing windows well.  However, it's here for
 	 *        demo purposes.
@@ -164,7 +155,6 @@ nav li:first-child {
 }
 
 #container { 
-	flex: 1 0 auto;
 	width: 70%;
 	padding: 10px;
 	margin: auto;
@@ -284,7 +274,6 @@ table tbody tr th {
 footer {
     display: flex;
     flex-direction: row;
-	flex-shrink: 0;
     justify-content: space-between;
     align-items: center;
     background-color: black;
