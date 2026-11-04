@@ -158,10 +158,12 @@ nav li:first-child {
 }
 
 #container { 
-	width: 70%;
+	width: 90%;
+	max-width: 900px;
 	padding: 10px;
 	margin: auto;
 	overflow: auto;
+	box-sizing: border-box;
 }
 
 .image-container {
