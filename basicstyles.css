@@ -349,7 +349,7 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    footer .footer-content:not(.right-side) {
+    footer .footer-content {
         display: none;
     }
 
