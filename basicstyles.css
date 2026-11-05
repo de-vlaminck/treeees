@@ -349,8 +349,7 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    /* Hide the left footer content block */
-    footer .footer-content:not(.right-side) {
+    footer .footer-content{
         display: none;
     }
 
