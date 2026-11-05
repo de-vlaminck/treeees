@@ -52,7 +52,6 @@ nav {
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Remove default list styling and align items inline */
 nav ul {
     list-style-type: none;
     text-align: center;
@@ -63,8 +62,8 @@ nav ul {
 }
 
 nav li { 
-	flex: 1;                   /* Automatically shrinks/grows to fill mobile screens */
-    min-width: 0;              /* Prevents flex items from clipping */
+	flex: 1;                  
+    min-width: 0;        
     max-width: 150px;
     display: inline-block; 
     width: 150px;
