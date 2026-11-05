@@ -349,10 +349,12 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    footer .footer-content {
+    /* Hide the left footer content block */
+    footer .footer-content:not(.right-side) {
         display: none;
     }
 
+    /* Adjust footer alignment when space opens up */
     footer {
         justify-content: center; /* Centers remaining items horizontally */
         gap: 30px;
